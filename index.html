@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdul Hafeez — Graphic Designer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,6 +16,12 @@
       font-family: 'Poppins', sans-serif;
       background: #f8fafc;
       color: #222;
+    }
+
+    /* FRONT PAGE DESIGNER FONT */
+    .front-font {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
     }
 
     header {
@@ -25,8 +33,16 @@
 
     header.hidden { display: none; }
 
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; opacity: 0.9; }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
 
     nav {
       background: #0b7a5a;
@@ -117,7 +133,8 @@
 
 <body>
 
-<header id="header">
+<!-- HEADER -->
+<header id="header" class="front-font">
   <img src="Abdul.jpg" alt="Abdul Hafeez"
        style="width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:15px;border:4px solid #fff;" />
   <h1>Abdul Hafeez</h1>
@@ -125,6 +142,7 @@
   <p>Branding • Logos • Shirts • Social Media</p>
 </header>
 
+<!-- NAVBAR -->
 <nav>
   <button class="active" onclick="showSection('home', event)">Home</button>
   <button onclick="showSection('about', event)">About</button>
@@ -134,14 +152,16 @@
   <button onclick="showSection('contact', event)">Contact</button>
 </nav>
 
-<section id="home" class="active">
+<!-- HOME -->
+<section id="home" class="active front-font">
   <h2>Designer Profile</h2>
-  <p>
+  <p style="font-weight:700;">
     Abdul Hafeez is a creative <strong>Graphic Designer</strong> from Pakistan,
     specializing in logo design, shirt design, branding, and social media graphics.
   </p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
   <p>
@@ -150,22 +170,24 @@
   </p>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
   <h2>Education</h2>
   <ul>
     <li>
-      <strong>Matric</strong><br />
-      Govt High School Chack No 152 JB<br />
+      <strong>Matric</strong><br>
+      Govt High School Chack No 152 JB<br>
       <em>2021 – 2023</em>
     </li>
     <li>
-      <strong>Intermediate</strong><br />
-      Govt Maulana Muhammad Zakir Degree College, Ameenpur Banglow<br />
+      <strong>Intermediate</strong><br>
+      Govt Maulana Muhammad Zakir Degree College, Ameenpur Banglow<br>
       <em>2023 – 2025</em>
     </li>
   </ul>
 </section>
 
+<!-- WORK -->
 <section id="work">
   <h2>My Work</h2>
   <ul>
@@ -188,6 +210,7 @@
   </ul>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Experience</h2>
   <ul>
@@ -197,6 +220,7 @@
   </ul>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <p><strong>Phone:</strong> 0343-9014152</p>
@@ -204,6 +228,7 @@
   <p><strong>Email:</strong> abdulhafeez452947@gmail.com</p>
 </section>
 
+<!-- FOOTER -->
 <footer id="footer">
   © 2026 Abdul Hafeez | Graphic Design Portfolio
 </footer>
