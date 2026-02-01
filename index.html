@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdul Hafeez | Graphic Designer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,83 +17,118 @@
 }
 
 body{
-  background:#f3f6f5;
+  background:#f5f5f5;
 }
 
-/* ===== FLEX HEADER STRIP ===== */
-.hero{
-  background:#0b7a5a;
-  padding:40px 20px;
+/* ===== HEADER / HERO ===== */
+header{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f9b6c,#1dd3a7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
 }
 
-.hero-flex{
-  max-width:1100px;
-  margin:auto;
+/* glass flex card */
+.hero-card{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:25px;
+  padding:45px 55px;
   display:flex;
   align-items:center;
-  gap:30px;
-  background:#0f9b6c;
-  padding:30px;
-  border-radius:16px;
-  color:#fff;
+  gap:45px;
+  box-shadow:0 25px 45px rgba(0,0,0,0.25);
+  max-width:950px;
+  width:100%;
 }
 
-/* image */
-.hero-flex img{
-  width:140px;
-  height:140px;
+/* profile image */
+.hero-card img{
+  width:180px;
+  height:180px;
   border-radius:50%;
-  border:4px solid #fff;
+  border:6px solid #fff;
   object-fit:cover;
 }
 
 /* text */
 .hero-text h1{
-  font-size:2.4rem;
-  font-weight:600;
+  font-family:'Playfair Display', serif;
+  font-size:3.2rem;
+  font-weight:800;
+  color:#fff;
 }
 
 .hero-text p{
-  margin-top:5px;
-  font-weight:500;
+  font-size:1.3rem;
+  font-weight:600;
+  margin-top:6px;
+  color:#eafff7;
 }
 
 /* skills */
-.skills{
-  margin-top:15px;
+.hero-skills{
   display:flex;
-  gap:10px;
+  gap:12px;
   flex-wrap:wrap;
+  margin-top:22px;
 }
 
-.skills span{
-  background:rgba(255,255,255,0.2);
-  padding:6px 14px;
-  border-radius:20px;
-  font-size:0.85rem;
+.hero-skills span{
+  background:rgba(255,255,255,0.25);
+  padding:8px 20px;
+  border-radius:30px;
+  font-size:0.9rem;
+  font-weight:600;
+  color:#fff;
 }
 
 /* buttons */
-.buttons{
-  margin-top:18px;
+.hero-buttons{
   display:flex;
-  gap:15px;
+  gap:18px;
+  margin-top:28px;
 }
 
-.buttons a{
+.hero-buttons a{
   text-decoration:none;
-  background:#fff;
-  color:#0b7a5a;
-  padding:8px 18px;
-  border-radius:20px;
+  padding:12px 30px;
+  border-radius:30px;
   font-weight:600;
+  transition:0.3s;
+}
+
+.btn-hire{
+  background:#ffffff;
+  color:#0f9b6c;
+}
+
+.btn-hire:hover{
+  background:#eafff7;
+}
+
+.btn-whatsapp{
+  background:#25d366;
+  color:#fff;
+}
+
+.btn-whatsapp:hover{
+  background:#1ebe5d;
 }
 
 /* responsive */
 @media(max-width:768px){
-  .hero-flex{
+  .hero-card{
     flex-direction:column;
     text-align:center;
+    padding:35px 25px;
+  }
+
+  .hero-text h1{
+    font-size:2.4rem;
   }
 }
 </style>
@@ -100,33 +136,33 @@ body{
 
 <body>
 
-<!-- FLEX HEADER -->
-<div class="hero">
-  <div class="hero-flex">
+<header>
+  <div class="hero-card">
 
-    <!-- image -->
+    <!-- CHANGE IMAGE NAME HERE -->
     <img src="Abdul.jpg" alt="Abdul Hafeez">
 
-    <!-- text -->
     <div class="hero-text">
       <h1>Abdul Hafeez</h1>
       <p>Graphic Designer</p>
 
-      <div class="skills">
-        <span>Logos</span>
+      <div class="hero-skills">
+        <span>Logo Design</span>
         <span>Branding</span>
-        <span>Shirt Design</span>
+        <span>T-Shirt Design</span>
         <span>Social Media</span>
       </div>
 
-      <div class="buttons">
-        <a href="#">Hire Me</a>
-        <a href="https://wa.me/923439014152">WhatsApp</a>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-hire">Hire Me</a>
+        <a href="https://wa.me/923439014152" target="_blank" class="btn-whatsapp">
+          WhatsApp
+        </a>
       </div>
     </div>
 
   </div>
-</div>
+</header>
 
 </body>
 </html>
