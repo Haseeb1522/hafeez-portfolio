@@ -1,236 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdul Hafeez — Graphic Designer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Hafeez — Graphic Designer</title>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:#f8fafc;
-  color:#222;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #222;
+    }
 
-/* ================= HEADER ================= */
-header{
-  background:linear-gradient(135deg,#064635,#0b7a5a);
-  color:white;
-  padding:80px 20px;
-  text-align:center;
-  position:relative;
-}
+    /* FRONT PAGE DESIGNER FONT */
+    .front-font {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
 
-header.hidden{display:none}
+    header {
+      background: linear-gradient(135deg, #064635, #0b7a5a);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
 
-/* FLEX HERO */
-.hero{
-  max-width:1000px;
-  margin:auto;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  gap:30px;
-}
+    header.hidden { display: none; }
 
-.hero img{
-  width:170px;
-  height:170px;
-  border-radius:50%;
-  border:5px solid #fff;
-  object-fit:cover;
-}
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
 
-/* NAME EFFECT */
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:3rem;
-  font-weight:800;
-  background:linear-gradient(90deg,#fff,#b7ffe3,#fff);
-  background-size:200%;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:shine 3s linear infinite;
-}
+    header p {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
 
-@keyframes shine{
-  to{background-position:200%}
-}
+    nav {
+      background: #0b7a5a;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-/* TYPING TEXT */
-#typing{
-  font-size:1.3rem;
-  font-weight:700;
-  margin-top:5px;
-}
+    nav button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-/* SKILLS */
-.skills{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  justify-content:center;
-  margin-top:20px;
-}
+    nav button:hover,
+    nav button.active { background: #065f46; }
 
-.skill{
-  background:rgba(255,255,255,.18);
-  padding:8px 16px;
-  border-radius:30px;
-  font-weight:600;
-}
+    section {
+      display: none;
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      animation: fade 0.6s ease;
+    }
 
-/* BUTTONS */
-.cta{
-  margin-top:25px;
-  display:flex;
-  gap:15px;
-  justify-content:center;
-}
+    section.active { display: block; }
 
-.cta a{
-  text-decoration:none;
-  padding:12px 26px;
-  border-radius:30px;
-  font-weight:600;
-}
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-.hire{
-  background:#fff;
-  color:#064635;
-}
+    h2 {
+      color: #064635;
+      border-bottom: 2px solid #eee;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+    }
 
-.whatsapp{
-  background:#25d366;
-  color:white;
-}
+    ul { list-style: none; margin-top: 10px; }
 
-/* ================= NAV ================= */
-nav{
-  background:#0b7a5a;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-}
+    li {
+      margin: 10px 0;
+      padding: 12px;
+      background: #ecfdf5;
+      border-left: 4px solid #0b7a5a;
+      border-radius: 6px;
+    }
 
-nav button{
-  background:none;
-  border:none;
-  color:white;
-  padding:15px 20px;
-  cursor:pointer;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
 
-nav button.active,
-nav button:hover{
-  background:#065f46;
-}
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #0b7a5a;
+      transition: 0.3s;
+    }
 
-/* ================= SECTIONS ================= */
-section{
-  display:none;
-  max-width:1000px;
-  margin:40px auto;
-  background:white;
-  padding:40px;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
+    .gallery img:hover { transform: scale(1.05); }
 
-section.active{display:block}
+    footer {
+      background: #064635;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
 
-h2{
-  color:#064635;
-  margin-bottom:15px;
-  border-bottom:2px solid #eee;
-}
-
-ul{list-style:none}
-li{
-  background:#ecfdf5;
-  padding:12px;
-  margin:10px 0;
-  border-left:4px solid #0b7a5a;
-  border-radius:6px;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:15px;
-}
-
-.gallery img{
-  width:100%;
-  border-radius:10px;
-  border:2px solid #0b7a5a;
-}
-
-/* ================= FOOTER ================= */
-footer{
-  background:#064635;
-  color:white;
-  text-align:center;
-  padding:15px;
-}
-footer.hidden{display:none}
-</style>
+    footer.hidden { display: none; }
+  </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<header id="header">
-  <div class="hero">
-    <img src="Abdul.jpg">
-
-    <div>
-      <h1>Abdul Hafeez</h1>
-      <div id="typing"></div>
-
-      <div class="skills">
-        <div class="skill">Logos</div>
-        <div class="skill">Branding</div>
-        <div class="skill">Shirt Design</div>
-        <div class="skill">Social Media</div>
-      </div>
-
-      <div class="cta">
-        <a href="#" class="hire" onclick="openSection('contact')">Hire Me</a>
-        <a href="https://wa.me/923439014152" target="_blank" class="whatsapp">WhatsApp</a>
-      </div>
-    </div>
-  </div>
+<header id="header" class="front-font">
+  <img src="Abdul.jpg" alt="Abdul Hafeez"
+       style="width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:15px;border:4px solid #fff;" />
+  <h1>Abdul Hafeez</h1>
+  <p>Graphic Designer</p>
+  <p>Branding • Logos • Shirts • Social Media</p>
 </header>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
-  <button class="active" onclick="openSection('home',this)">Home</button>
-  <button onclick="openSection('about',this)">About</button>
-  <button onclick="openSection('education',this)">Education</button>
-  <button onclick="openSection('work',this)">Work</button>
-  <button onclick="openSection('experience',this)">Experience</button>
-  <button onclick="openSection('contact',this)">Contact</button>
+  <button class="active" onclick="showSection('home', event)">Home</button>
+  <button onclick="showSection('about', event)">About</button>
+  <button onclick="showSection('education', event)">Education</button>
+  <button onclick="showSection('work', event)">My Work</button>
+  <button onclick="showSection('experience', event)">Experience</button>
+  <button onclick="showSection('contact', event)">Contact</button>
 </nav>
 
-<section id="home" class="active">
-<h2>Designer Profile</h2>
-<p><strong>Creative Graphic Designer</strong> specializing in logos, branding, shirts and social media graphics.</p>
+<!-- HOME -->
+<section id="home" class="active front-font">
+  <h2>Designer Profile</h2>
+  <p style="font-weight:700;">
+    Abdul Hafeez is a creative <strong>Graphic Designer</strong> from Pakistan,
+    specializing in logo design, shirt design, branding, and social media graphics.
+  </p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-<h2>About Me</h2>
-<p>Professional graphic designer focused on quality and creativity.</p>
+  <h2>About Me</h2>
+  <p>
+    I am a professional graphic designer with strong skills in CorelDRAW
+    and Adobe tools. I focus on creativity, quality, and client satisfaction.
+  </p>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
-<h2>Education</h2>
-<ul>
-<li><strong>Matric</str
+  <h2>Education</h2>
+  <ul>
+    <li>
+      <strong>Matric</strong><br>
+      Govt High School Chack No 152 JB<br>
+      <em>2021 – 2023</em>
+    </li>
+    <li>
+      <strong>Intermediate</strong><br>
+      Govt Maulana Muhammad Zakir Degree College, Ameenpur Banglow<br>
+      <em>2023 – 2025</em>
+    </li>
+  </ul>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <h2>My Work</h2>
+  <ul>
+    <li>
+      <strong>Shirt Designs</strong>
+      <div class="gallery">
+        <img src="Shirt1.jpg">
+        <img src="Shirt2.jpg">
+        <img src="Shirt3.jpg">
+        <img src="Shirt4.jpg">
+      </div>
+    </li>
+    <li>
+      <strong>Logo Designs</strong>
+      <div class="gallery">
+        <img src="Logo1.jpg">
+        <img src="Logo2.jpg">
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+  <ul>
+    <li>1+ year experience in graphic designing</li>
+    <li>Expert in sublimation shirts & uniforms</li>
+    <li>Branding & marketing materials</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p><strong>Phone:</strong> 0343-9014152</p>
+  <p><strong>Phone:</strong> 0346-5581152</p>
+  <p><strong>Email:</strong> abdulhafeez452947@gmail.com</p>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  © 2026 Abdul Hafeez | Graphic Design Portfolio
+</footer>
+
+<script>
+  function showSection(id, event) {
+    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+
+    const header = document.getElementById('header');
+    const footer = document.getElementById('footer');
+
+    if (id === 'home') {
+      header.classList.remove('hidden');
+      footer.classList.remove('hidden');
+    } else {
+      header.classList.add('hidden');
+      footer.classList.add('hidden');
+    }
+  }
+</script>
+
+</body>
+</html>
